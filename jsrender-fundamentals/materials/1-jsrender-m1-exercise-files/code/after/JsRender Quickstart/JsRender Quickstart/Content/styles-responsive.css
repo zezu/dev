@@ -1,0 +1,29 @@
+.navbar .brand {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+@media (min-width: 1200px) {
+	#musicList h2 {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.navigation {
+		float: none;
+		margin-top: 20px;
+		width: auto;
+	}
+
+	.navbar .brand {
+		font-size: 13px;
+		font-weight: bold;
+		padding-right: 0px;
+	}
+}

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>3 Steps to JsRender</title>
+        <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="../Content/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="../Content/styles.css" rel="stylesheet" type="text/css" />
+        <link href="../Content/styles-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="../Content/prettify.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+    <body>
+    <div class="container main">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div class="portlet-container">
+            <div class="accordion codePortlet"></div>
+            <h1>Rendered template</h1>
+            <div class="portlet content">
+                <!-- BEGIN DEMO CONTENT -->
+
+
+                
+                
+
+
+
+
+                <ul class="row-fluid unstyled" id="musicList">
+                </ul>
+                
+                
+
+
+
+
+
+                <!-- END DEMO CONTENT -->
+            </div>
+        </div>
+    </div>
+        
+        
+        
+        <script id="musicTemplate" type="text/x-jsrender">
+        <li class="span4" >
+            <div>
+                <h2>{{:model.brand}} {{:model.name}}</h2>
+                <p class="price">${{:pricing.salePrice}}</p>
+                <div class="image">
+                    <img src="../images/{{:gallery.mainPhoto}}" />
+                    <!-- <img src="../images/{{:gallery['mainPhoto']}}"/> -->
+                </div>
+            </div>
+        </li>
+        </script>
+        
+        
+
+        <script src="../scripts/jquery-1.7.1.js" type="text/javascript"></script>
+        <script src="../scripts/bootstrap-collapse.js" type="text/javascript"></script>
+        <script src="../scripts/jsrender.js" type="text/javascript"></script>
+        <script src="../scripts/prettify.js" type="text/javascript"></script>
+
+        <script src="../js/musicdata.js" type="text/javascript"></script>
+	    <script src="../js/jsrender.utils.js" type="text/javascript"></script>
+        <script src="../js/jsrender.helpers.js" type="text/javascript"></script>
+        
+        
+        
+        <script type="text/javascript"> 
+            $(function () {
+                my.vm = {
+                    metadata: {
+                        title: "3 Steps to JsRender",
+                        currentDemo: 1.02,
+                        codeExamples: [
+                            { title: "JavaScript", code: ["#codeJavaScript"] },
+                            { title: "JsRender Template", code: ["#codeTemplate"] }
+                        ]
+                    },
+                    music: my.getMusic().products
+                };
+                // Render a single music to the template
+                $("#musicList").html(
+                    $("#musicTemplate").render(my.vm.music.slice(0, 3))
+                );
+
+                my.utils.renderStructure({ data: my.vm });
+            });
+        </script>
+        
+        
+        
+
+        <div class="hiddenCode hidden">
+        <pre class="prettyprint linenums" id="codeJavaScript">
+&lt;!-- Render an object to a template -->
+$("#musicList").html(
+    $("#musicTemplate").render(my.vm.music[2])
+);</pre>
+        <pre class="prettyprint linenums" id="codeTemplate">
+&lt;!-- Using paths -->
+&lt;div>{{:model.brand}} {{:model.name}}&lt;/div>
+&lt;p class="price">${{:pricing.salePrice}}&lt;/p>
+&lt;div class="image">
+    &lt;img src="../images/{{:gallery.mainPhoto}}" />
+    &lt;!-- or get the path by key -->
+    &lt;img src="../images/{{:gallery['mainPhoto']}}"/>
+&lt;/div></pre>
+    </div>
+    </body>
+</html>

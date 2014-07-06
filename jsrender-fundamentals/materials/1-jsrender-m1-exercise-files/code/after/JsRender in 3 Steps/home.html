@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <script src="Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+        <script src="Scripts/jsrender.js" type="text/javascript"></script>
+    </head>
+<body>
+    <ul id="musicList"></ul>
+    
+    <script id="musicTemplate" type="text/x-jsrender">
+        <li>
+        <div>
+            <h2>{{:model.brand}} {{:model.name}}</h2>
+            <p>${{:pricing.salePrice}}</p>
+            <img src="{{:gallery.mainPhoto}}"/>
+        </div>
+        </li>
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            var products = [
+            {
+                pricing: { salePrice: 1649.01 },
+                gallery: { mainPhoto: "http://johnpapa.net/files/downloads/images/Taylor/314ce.jpg" },
+                model: {
+                    name: "314ce",
+                    brand: "Taylor"
+                }
+            },
+            {
+                pricing: { salePrice: 4775.00 },
+                gallery: { mainPhoto: "http://johnpapa.net/files/downloads/images/Taylor/314ce.jpg" },
+                model: {
+                    name: "814ce",
+                    brand: "Taylor"
+                }
+            },
+            {
+                modelId: 4,
+                pricing: { salePrice: 5899.00 },
+                gallery: { mainPhoto: "http://johnpapa.net/files/downloads/images/Taylor/314ce.jpg" },
+                model: {
+                    name: "914ce",
+                    brand: "Taylor"
+                }
+            }];
+
+            $('#musicList').html(
+                $('#musicTemplate').render(products)
+            );
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿    <!--<div class="span12">-->
+        <div class="pagination row-fluid">
+            <ul class="span12">
+                {{for metadata}}
+                <li class="{{:prevLink ? '' : 'disabled'}}"><a href="{{:prevLink}}"><<</a></li>
+                <li class="active"><a>{{:title}}</a></li>
+                <li class="{{:nextLink ? '' : 'disabled'}}"><a href="{{:nextLink}}">>></a></li>
+                {{/for}}
+            </ul>
+        </div>
+<!--    </div>
+-->

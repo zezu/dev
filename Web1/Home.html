@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet" /> 
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/Plugins/jsRender/jsrender.js"></script>
+    <script src="Scripts/Prettify/prettify.js"></script>
+</head>
+<body>
+    <ul id="musicList"></ul>
+
+    <script id="musicTemplate" type="text/x-jsrender">
+        <li>
+            <div>
+                <h2>{{:model.brand}} {{:model.name}}</h2>
+                <p>${{:pricing.salePrice}}</p>
+                <img src="{{:gallery.mainPhoto}}"/>
+            </div>
+
+        </li>
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            var products = [
+{
+    pricing: { salePrice: 1649.01 },
+    gallery: { mainPhoto: "img/314ce.png" },
+    model: {
+        name: "314ce",
+        brand: "Taylor"
+    }
+},
+{
+    pricing: { salePrice: 4775.00 },
+    gallery: { mainPhoto: "img/314ce.png" },
+    model: {
+        name: "814ce",
+        brand: "Taylor"
+    }
+},
+{
+    modelId: 4,
+    pricing: { salePrice: 5899.00 },
+    gallery: { mainPhoto: "img/314ce.png" },
+    model: {
+        name: "914ce",
+        brand: "Taylor"
+    }
+}];
+            $('#musicList').html($('#musicTemplate').render(products));
+
+        });
+
+    </script>
+</body>
+</html>

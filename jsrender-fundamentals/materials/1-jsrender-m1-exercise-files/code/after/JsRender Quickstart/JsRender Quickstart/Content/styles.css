@@ -1,0 +1,229 @@
+body {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkEyQzg4Njg5RDc5NTExRTA5NzQxOTRCMERBNzQwRkE2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkEyQzg4NjhBRDc5NTExRTA5NzQxOTRCMERBNzQwRkE2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTJDODg2ODdENzk1MTFFMDk3NDE5NEIwREE3NDBGQTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTJDODg2ODhENzk1MTFFMDk3NDE5NEIwREE3NDBGQTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4udnI1AAABX0lEQVR42kzT2XaDMBAD0NQh//+7WQhU5p6q9gOMZ9Ms8s/z+bzf78dxjDF+rvP5fLZt+36/t9stpvM8I8QhpnyjuV0n+hG//Khi4xo/Yfu+J0v1AGjiMGKOyj1CvnGKUvrH4xGnBNQUz+BB2mKLK3y5+SVAbRXESM1niJFS7tbfzo/rSBGNWqYDKH36qp8cAY6h6FmKdDQ6TAHqLI6rQ6OjRM5mhYlMPlDkNhx5zaiXWYgLQ5o0PFCSKli1ruQpvN9vK5WlhvPvGPI69vJndIG22uHjycqc/Tr0qDKg0SLmurZcyw25lANpU8xKlZKhTI4PU/kf5UTqk+jzEGar8RBMWE1T/3q9pJxcvTBTgjUauL46iI5tRgXQnHRe3nO17RJ+fR4J3Fb2lbfdjV5UgQUwgzdzWVck9DKJlZ5ldZ9deTpKQ0WuS+6TarD6//lnB10sLZ5ppLRtGNpE+BVgAADV2g6Yzv4yAAAAAElFTkSuQmCC);
+	overflow-y: scroll;
+}
+
+.main {
+	margin: 10px auto;
+}
+
+.navbar {
+	margin: 10px;
+}
+
+.navbar-inner {
+	background: url(../content/images/navbar.png);
+	filter: none;
+	padding: 5px 15px 4px 15px;
+}
+
+.navbar .brand,
+.navbar #twitter {
+	line-height: 38px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+.navbar .brand {
+	line-height: 38px;
+}
+
+.navbar #twitter {
+	background: url(../content/images/byjohnpapa.png) no-repeat center right;
+	color: transparent;
+	display: block;
+	height: 32px;
+	margin-top: 3px;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	width: 113px;
+}
+
+.navbar #twitter:hover {
+	opacity: 0.7;
+}
+
+.portlet {
+	background: white;
+	border: solid 1px #ddd;
+	border-radius: 4px;
+	box-shadow: 0px 1px 1px 1px #efefef;
+}
+
+.content {
+	padding: 20px 20px 10px 20px;
+}
+
+h1 {
+	color: rgb(50, 50, 50);
+	font-size: 25px;
+	letter-spacing: -2px;
+	margin-bottom: 5px;
+}
+
+.navigation {
+	float: left;
+	margin: 10px;
+	width: 175px;
+}
+
+.navigation .nav {
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.navigation .designby {
+	margin: 3px 0px 0px 3px;
+}
+
+.navigation .designby:hover {
+	opacity: 0.7;
+}
+
+/* Intended for the right hand side content area container */
+.portlet-header {
+	overflow: auto;
+	padding: 4px 0 0 10px;
+}
+
+.portlet-container {
+	overflow: auto;
+	padding: 10px;
+}
+
+.portlet.breadcrumb,
+.portlet {
+	overflow: auto;
+	width: auto;
+}
+
+.accordion-group {
+	margin-bottom: 0px;
+}
+
+pre.prettyprint {
+	margin-top: 5px;
+}
+.label-large{
+	font-size: 16px;
+	padding: 4px 6px 4px 6px;
+	font-weight: bold;
+	line-height: 18px;
+}
+
+
+
+
+
+.thumbnail {
+	padding: 2px;
+}
+
+
+
+
+
+.metadataTitle {
+	font-weight: bold;
+}
+.metadataCode {
+	color: #A90303;
+}
+.puzzleImage
+{
+	margin: auto;
+	width: 343px;
+	height: 275px;
+}
+
+
+#musicList li:nth-child(4n+5) {
+	margin-left: 0px;
+}
+
+#musicList > li {
+	background: #f6f5f1;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#musicList > li > div {
+	background: white;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin: 5px;
+	overflow: auto;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+#musicList h2 {
+	font-size: 15px;
+	font-family: georgia;
+	line-height: 28px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	padding: 10px 0px;
+}
+
+#musicList .price {
+	background: #fbfaf8;
+	border-bottom: solid 1px #efefed;
+	border-top: solid 1px #efefed;
+	font-size: 15px;
+	font-family: georgia;
+	letter-spacing: 1px;
+	line-height: 22px;
+	font-weight: normal;
+	padding: 10px 0px;
+}
+
+#musicList .price small {
+	text-transform: uppercase;
+}
+
+#musicList .image {
+	padding: 10px 0px;
+}
+
+#musicList .rating {
+	font-family: georgia;
+	font-size: 16px;
+	font-style: italic;
+	letter-spacing: 1px;
+	margin-top: 10px;
+}
+
+#musicList .stars {
+	margin: auto;
+	width: 75px;
+}
+
+#musicList .stars > span {
+	float: left;
+	height: 15px;
+	list-style: none;
+	width: 15px;
+}
+
+#musicList .emptyStar {
+	background: url(../images/star_empty.png) no-repeat 0 0;
+}
+
+#musicList .fullStar {
+	background: url(../images/star_full.png) no-repeat 0 0;
+}
+
+#musicList .accordian-group-inner {
+	border: 0;
+}
+#musicList .text {
+	font-size: 15px;
+	font-family: georgia;
+	line-height: 22px;	
+	font-weight: normal;
+}

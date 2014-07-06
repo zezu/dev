@@ -1,0 +1,26 @@
+            var products = [
+            {
+                pricing: { salePrice: 1649.01 },
+                gallery: { mainPhoto: "http://johnpapa.net/files/downloads/images/Taylor/314ce.jpg" },
+                model: {
+                    name: "314ce",
+                    brand: "Taylor"
+                }
+            },
+            {
+                pricing: { salePrice: 4775.00 },
+                gallery: { mainPhoto: "http://johnpapa.net/files/downloads/images/Taylor/314ce.jpg" },
+                model: {
+                    name: "814ce",
+                    brand: "Taylor"
+                }
+            },
+            {
+                modelId: 4,
+                pricing: { salePrice: 5899.00 },
+                gallery: { mainPhoto: "http://johnpapa.net/files/downloads/images/Taylor/314ce.jpg" },
+                model: {
+                    name: "914ce",
+                    brand: "Taylor"
+                }
+            }];

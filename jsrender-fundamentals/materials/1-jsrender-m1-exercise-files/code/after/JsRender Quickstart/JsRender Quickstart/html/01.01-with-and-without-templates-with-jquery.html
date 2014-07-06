@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/styles.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/styles-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/prettify.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+    <div class="container main">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div class="portlet-container">
+            <div class="accordion codePortlet"></div>
+            <h1>Rendered template</h1>
+            <div class="portlet content">
+                <!-- BEGIN DEMO CONTENT -->
+                <div class="row-fluid unstyled" id="musicList">
+                <div class="span6">
+                    <h3 class="label label-large label-info">Without a template</h3>
+                    <div id="musicContainer1">
+                    </div>
+                </div>
+                <div class="span6">
+                    <h3 class="label label-large label-info">With a template</h3>
+                    <div id="musicContainer2">
+                    </div>
+                </div>
+                </div>
+                <!-- END DEMO CONTENT -->
+            </div>
+        </div>
+    </div>
+    <script id="myMusicTemplate" type="text/x-jsrender">
+	    <div>
+		    <div>{{:#index+1}}: {{:model.brand}} {{:model.name}}</div>
+            <div>${{: pricing.salePrice }}</div>
+            <img src="../images/{{:gallery.mainPhoto}}" style="height:80px;"/>
+        </div>
+    </script>
+        <script src="../scripts/jquery-1.7.1.js" type="text/javascript"></script>
+        <script src="../scripts/bootstrap-collapse.js" type="text/javascript"></script>
+        <script src="../scripts/jsrender.js" type="text/javascript"></script>
+        <script src="../scripts/prettify.js" type="text/javascript"></script>
+
+        <script src="../js/musicdata.js" type="text/javascript"></script>
+	    <script src="../js/jsrender.utils.js" type="text/javascript"></script>
+        <script src="../js/jsrender.helpers.js" type="text/javascript"></script>
+    <script type="text/javascript"> 
+        $(function () {
+            my.vm = {
+                metadata: {
+                    title: "Why Use Templates?",
+                    currentDemo: 1.01,
+                    codeExamples: [
+                        { title: "JavaScript", code: ["#codeSansTemplate"] },
+                        { title: "JsRender Template", code: ["#codeRender", "#codeTemplate"] }
+                    ]
+                },
+                music: my.getMusic().products
+            };
+
+            // Without a template
+            var i = 1;
+            $(my.vm.music).each(function () {
+                var product = this;
+                $("#musicContainer1").append(
+                    "<div>" + i++ + ": "
+                        + product.model.brand + " "
+                        + product.model.name + "</div>"
+                        + "<div> $" + product.pricing.salePrice 
+                        + "</div>"
+                        + "<img src='../images/"
+                        + product.gallery.mainPhoto
+                        + "' style='height:80px;'/>");
+            });
+
+            // With a script template
+            $("#musicContainer2").html(
+                $("#myMusicTemplate").render(my.vm.music)
+            );
+
+            my.utils.renderStructure({ data: my.vm });
+        });
+    </script>
+
+    <div class="hiddenCode hidden">
+        
+        <pre class="prettyprint linenums" id="codeSansTemplate">
+// Without a template
+var i = 1;
+$(my.vm.music).each(function () {
+    var product = this;
+    $("#musicContainer1").append(
+        "&lt;div>" + i++ + ": " + product.description
+        + " ($" + product.pricing.salePrice
+        + ")&lt;/div>");
+});</pre>
+        <pre class="prettyprint linenums" id="codeRender">
+// With a script template
+$("#musicContainer2").html(
+    $("#myMusicTemplate").render(my.vm.music)
+);</pre>
+        <pre class="prettyprint linenums" id="codeTemplate">
+&lt;!-- JsRender Template -->
+&lt;script id="myMusicTemplate" type="text/x-jsrender">
+    &lt;div>
+        {{:#index+1}}: {{:description}} (${{:pricing.salePrice}})
+    &lt;/div>
+&lt;/script></pre>
+    </div>
+    </body>
+</html>

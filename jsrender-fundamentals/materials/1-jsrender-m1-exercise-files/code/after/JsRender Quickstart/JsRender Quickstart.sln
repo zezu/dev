@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsRender Quickstart - 1", "JsRender Quickstart\JsRender Quickstart - 1.csproj", "{DB8AC4D5-8641-4B3E-AB40-1B9E60CC265E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB8AC4D5-8641-4B3E-AB40-1B9E60CC265E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB8AC4D5-8641-4B3E-AB40-1B9E60CC265E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB8AC4D5-8641-4B3E-AB40-1B9E60CC265E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB8AC4D5-8641-4B3E-AB40-1B9E60CC265E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

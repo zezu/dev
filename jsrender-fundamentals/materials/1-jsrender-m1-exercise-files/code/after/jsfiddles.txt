@@ -1,0 +1,7 @@
+
+JsRender Fundamentals - Module 1 - Hello World (with jquery, jsrender, and bootstrap)
+http://jsfiddle.net/johnpapa/4YqEP/
+
+
+JsRender Fundamentals - Module 1 - Why User JsRender
+http://jsfiddle.net/johnpapa/ADAUt/
